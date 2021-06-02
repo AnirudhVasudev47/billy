@@ -31,7 +31,7 @@ class _MyAppState extends State<MyApp> {
   @override
   Widget build(BuildContext context) {
     return ScreenUtilInit(
-        designSize: Size(393, 830),
+        designSize: Size(428, 926),
         builder: () {
           return MultiProvider(
             providers: [
@@ -62,6 +62,8 @@ class AuthenticationWrapper extends StatelessWidget {
     }else {
       // return HomePage();
     }
-    return Container();
+    return Container(
+      child: Container(),
+    );
   }
 }
