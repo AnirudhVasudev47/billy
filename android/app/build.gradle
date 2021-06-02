@@ -48,3 +48,13 @@ android {
 flutter {
     source '../..'
 }
+
+dependencies {
+    implementation 'com.google.firebase:firebase-appcheck-safetynet:16.0.0-beta01'
+    implementation platform('com.google.firebase:firebase-bom:28.0.1')
+    implementation 'com.google.firebase:firebase-analytics'
+    implementation 'com.google.firebase:firebase-database:19.6.0'
+    implementation 'com.google.firebase:firebase-auth:20.0.2'
+    implementation 'org.jetbrains:annotations:15.0'
+}
+apply plugin: 'com.google.gms.google-services'
