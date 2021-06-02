@@ -41,7 +41,7 @@ class _MyAppState extends State<MyApp> {
             ],
             child: MaterialApp(
               debugShowCheckedModeBanner: false,
-              title: 'Flutter Demo',
+              title: 'Billy App',
               theme: CustomTheme.lightTheme,
               darkTheme: CustomTheme.darkTheme,
               themeMode: currentTheme.currentTheme,
