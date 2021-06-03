@@ -5,10 +5,11 @@ class ThemeColors {
   static Color white = Colors.white;
   static Color prime = Color(0xff240046);
   static Color transactionSuccess = Color(0xffE2F0F6);
+  static Color buttonColor = Color(0xffE2F0F6);
 
   //Light Theme
-  static Color primaryColorLight = Color(0xff9D4EDD);
-  static Color accentColorLight = Color(0xff9D4EDD);
+  static Color primaryColorLight = Color(0xff007AFD);
+  static Color accentColorLight = Color(0xff007AFD);
   static Color backgroundColorLight = Color(0xffffffff);
   static Color scaffoldBackgroundColorLight = Color(0xffffffff);
 
@@ -19,8 +20,8 @@ class ThemeColors {
   static Color bodyText2Light = Color(0xff181818);
 
   //Dark Theme
-  static Color primaryColorDark = Color(0xff9D4EDD);
-  static Color accentColorDark = Color(0xff9D4EDD);
+  static Color primaryColorDark = Color(0xff007AFD);
+  static Color accentColorDark = Color(0xff007AFD);
   static Color backgroundColorDark = Color(0xffffffff);
   static Color scaffoldBackgroundColorDark = Color(0xffffffff);
 

@@ -9,6 +9,8 @@ class CustomTheme with ChangeNotifier {
 
   ThemeMode get currentTheme => _isDarkTheme ? ThemeMode.dark : ThemeMode.light;
 
+  static String themeSecondFont = 'Nunito';
+
   void toggleTheme() {
     _isDarkTheme = !_isDarkTheme;
     notifyListeners();
@@ -34,7 +36,7 @@ class CustomTheme with ChangeNotifier {
           color: ThemeColors.bodyText2Light,
         ),
       ),
-      fontFamily: 'Poppins',
+      fontFamily: 'Hind Siliguri',
     );
   }
 

@@ -1,5 +1,7 @@
 import 'package:billy/global/theme.dart';
 import 'package:billy/services/authentication.dart';
+import 'package:billy/ui/screen/home_screen.dart';
+import 'package:billy/ui/screen/on_boarding_screen.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
@@ -58,12 +60,9 @@ class AuthenticationWrapper extends StatelessWidget {
   Widget build(BuildContext context) {
 
     if (firebaseAuth.currentUser == null) {
-      // return OnBoardingScreen();
+      return OnBoardingScreen();
     }else {
-      // return HomePage();
+      return HomePage();
     }
-    return Container(
-      child: Container(),
-    );
   }
 }

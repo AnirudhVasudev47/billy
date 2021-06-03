@@ -51,14 +51,35 @@ flutter:
 
 #  assets:
 
+
+  assets:
+    - assets/images/onboarding/
+
   fonts:
    - family: Hind Siliguri
      fonts:
-       - asset: assets/fonts/HindSiliguri-Bold.ttf
-       - asset: assets/fonts/HindSiliguri-Light.ttf
-       - asset: assets/fonts/HindSiliguri-Medium.ttf
-       - asset: assets/fonts/HindSiliguri-Regular.ttf
-       - asset: assets/fonts/HindSiliguri-SemiBold.ttf
+       - asset: assets/fonts/hind_siliguri/HindSiliguri-Bold.ttf
+       - asset: assets/fonts/hind_siliguri/HindSiliguri-Light.ttf
+       - asset: assets/fonts/hind_siliguri/HindSiliguri-Medium.ttf
+       - asset: assets/fonts/hind_siliguri/HindSiliguri-Regular.ttf
+       - asset: assets/fonts/hind_siliguri/HindSiliguri-SemiBold.ttf
+   - family: Nunito
+     fonts:
+       - asset: assets/fonts/nunito/Nunito-Black.ttf
+       - asset: assets/fonts/nunito/Nunito-BlackItalic.ttf
+       - asset: assets/fonts/nunito/Nunito-Bold.ttf
+       - asset: assets/fonts/nunito/Nunito-BoldItalic.ttf
+       - asset: assets/fonts/nunito/Nunito-ExtraBold.ttf
+       - asset: assets/fonts/nunito/Nunito-ExtraBoldItalic.ttf
+       - asset: assets/fonts/nunito/Nunito-ExtraLight.ttf
+       - asset: assets/fonts/nunito/Nunito-ExtraLightItalic.ttf
+       - asset: assets/fonts/nunito/Nunito-Italic.ttf
+       - asset: assets/fonts/nunito/Nunito-Light.ttf
+       - asset: assets/fonts/nunito/Nunito-LightItalic.ttf
+       - asset: assets/fonts/nunito/Nunito-Regular.ttf
+       - asset: assets/fonts/nunito/Nunito-SemiBold.ttf
+       - asset: assets/fonts/nunito/Nunito-SemiBoldItalic.ttf
+
   # To add assets to your application, add an assets section, like this:
   # assets:
   #   - images/a_dot_burr.jpeg
