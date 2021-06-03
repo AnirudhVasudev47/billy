@@ -1,0 +1,47 @@
+{
+  "project_info": {
+    "project_number": "1058529008801",
+    "project_id": "billy-c3204",
+    "storage_bucket": "billy-c3204.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1058529008801:android:c94ae130e54db17e0da4e0",
+        "android_client_info": {
+          "package_name": "com.letsbilly.billy"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "1058529008801-kmar8k8ifmhi3e4k61facg973eftubes.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.letsbilly.billy",
+            "certificate_hash": "15378169ffd6cbbcc3796ecd62ad03b245750cce"
+          }
+        },
+        {
+          "client_id": "1058529008801-e0nd4tcnfbi4ha19geami8410d8tob5u.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBDA7Hk3QrV0oPVZGvVh_o3grORzChefqU"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "1058529008801-e0nd4tcnfbi4ha19geami8410d8tob5u.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
