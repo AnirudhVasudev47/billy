@@ -1,5 +1,6 @@
 import 'package:billy/global/color.dart';
 import 'package:billy/global/theme.dart';
+import 'package:billy/ui/screen/enter_number_screen.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
@@ -11,18 +12,20 @@ class OnBoardingScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     ScreenUtil screenUtil = new ScreenUtil();
     return Scaffold(
+      resizeToAvoidBottomInset: false,
       backgroundColor: ThemeColors.transactionSuccess,
       body: Container(
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.center,
           children: [
             Container(
-              padding: EdgeInsets.symmetric(
-                horizontal: screenUtil.setWidth(150),
-              ).copyWith(top: screenUtil.setHeight(118)),
+              padding: EdgeInsets.only(
+                top: screenUtil.setHeight(118),
+              ),
               child: Text(
-                'billy',
+                'billy.',
                 style: TextStyle(
+                  color: ThemeColors.logoColor,
                   fontFamily: CustomTheme.themeSecondFont,
                   fontWeight: FontWeight.w600,
                   fontSize: 63.sp,
@@ -52,7 +55,14 @@ class OnBoardingScreen extends StatelessWidget {
               height: screenUtil.setHeight(24),
             ),
             ElevatedButton(
-              onPressed: () {},
+              onPressed: () {
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(
+                    builder: (context) => EnterNumberScreen(),
+                  ),
+                );
+              },
               child: Container(
                 width: screenUtil.setWidth(336),
                 height: screenUtil.setHeight(50),
@@ -71,7 +81,7 @@ class OnBoardingScreen extends StatelessWidget {
                 ),
                 elevation: MaterialStateProperty.all(0),
               ),
-            )
+            ),
           ],
         ),
       ),

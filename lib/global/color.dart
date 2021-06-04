@@ -6,6 +6,9 @@ class ThemeColors {
   static Color prime = Color(0xff240046);
   static Color transactionSuccess = Color(0xffE2F0F6);
   static Color buttonColor = Color(0xffE2F0F6);
+  static Color black = Color(0xff000000);
+  static Color hintTextColor = Color(0xff8E8E90);
+  static Color logoColor = Color(0xff5EA9CE);
 
   //Light Theme
   static Color primaryColorLight = Color(0xff007AFD);
