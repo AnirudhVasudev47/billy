@@ -14,76 +14,74 @@ class OnBoardingScreen extends StatelessWidget {
     return Scaffold(
       resizeToAvoidBottomInset: false,
       backgroundColor: ThemeColors.transactionSuccess,
-      body: Container(
-        child: Column(
-          crossAxisAlignment: CrossAxisAlignment.center,
-          children: [
-            Container(
-              padding: EdgeInsets.only(
-                top: screenUtil.setHeight(118),
-              ),
-              child: Text(
-                'billy.',
-                style: TextStyle(
-                  color: ThemeColors.logoColor,
-                  fontFamily: CustomTheme.themeSecondFont,
-                  fontWeight: FontWeight.w600,
-                  fontSize: 63.sp,
-                ),
-              ),
+      body: Column(
+        crossAxisAlignment: CrossAxisAlignment.center,
+        children: [
+          Container(
+            padding: EdgeInsets.only(
+              top: screenUtil.setHeight(118),
             ),
-            Text(
-              'making bills easy',
+            child: Text(
+              'billy.',
               style: TextStyle(
+                color: ThemeColors.logoColor,
                 fontFamily: CustomTheme.themeSecondFont,
-                fontWeight: FontWeight.w700,
-                fontSize: 20.sp,
+                fontWeight: FontWeight.w600,
+                fontSize: 63.sp,
               ),
             ),
-            SizedBox(
-              height: screenUtil.setHeight(62),
+          ),
+          Text(
+            'making bills easy',
+            style: TextStyle(
+              fontFamily: CustomTheme.themeSecondFont,
+              fontWeight: FontWeight.w700,
+              fontSize: 20.sp,
             ),
-            Container(
-              height: screenUtil.setHeight(424),
-              alignment: Alignment.centerRight,
-              child: Image.asset(
-                'assets/images/onboarding/onboarding.png',
-                fit: BoxFit.contain,
-              ),
+          ),
+          SizedBox(
+            height: screenUtil.setHeight(62),
+          ),
+          Container(
+            height: screenUtil.setHeight(424),
+            alignment: Alignment.centerRight,
+            child: Image.asset(
+              'assets/images/onboarding/onboarding.png',
+              fit: BoxFit.contain,
             ),
-            SizedBox(
-              height: screenUtil.setHeight(24),
-            ),
-            ElevatedButton(
-              onPressed: () {
-                Navigator.push(
-                  context,
-                  MaterialPageRoute(
-                    builder: (context) => EnterNumberScreen(),
-                  ),
-                );
-              },
-              child: Container(
-                width: screenUtil.setWidth(336),
-                height: screenUtil.setHeight(50),
-                alignment: Alignment.center,
-                child: Text(
-                  'SIGN UP',
-                  style: TextStyle(
-                    fontWeight: FontWeight.w600,
-                    fontSize: 19.sp,
-                  ),
+          ),
+          SizedBox(
+            height: screenUtil.setHeight(24),
+          ),
+          ElevatedButton(
+            onPressed: () {
+              Navigator.push(
+                context,
+                MaterialPageRoute(
+                  builder: (context) => EnterNumberScreen(),
+                ),
+              );
+            },
+            child: Container(
+              width: screenUtil.setWidth(336),
+              height: screenUtil.setHeight(50),
+              alignment: Alignment.center,
+              child: Text(
+                'SIGN UP',
+                style: TextStyle(
+                  fontWeight: FontWeight.w600,
+                  fontSize: 19.sp,
                 ),
               ),
-              style: ButtonStyle(
-                backgroundColor: MaterialStateProperty.all(
-                  ThemeColors.primaryColorLight,
-                ),
-                elevation: MaterialStateProperty.all(0),
-              ),
             ),
-          ],
-        ),
+            style: ButtonStyle(
+              backgroundColor: MaterialStateProperty.all(
+                ThemeColors.primaryColorLight,
+              ),
+              elevation: MaterialStateProperty.all(0),
+            ),
+          ),
+        ],
       ),
     );
   }
