@@ -40,4 +40,12 @@ class AuthenticationService {
       return e.message.toString();
     }
   }
+
+  getUserNumber(){
+    String number = _firebaseAuth.currentUser!.phoneNumber.toString();
+    String newString = number.substring(0, 2 + 1)
+        + " "
+        + number.substring(2 + 1);
+    return newString;
+  }
 }

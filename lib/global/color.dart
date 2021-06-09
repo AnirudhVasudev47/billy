@@ -10,9 +10,13 @@ class ThemeColors {
   static Color hintTextColor = Color(0xff8E8E90);
   static Color logoColor = Color(0xff5EA9CE);
 
+  static Color subtitleColor = Color(0xffb1b1b1);
+  static Color dividerColor = Color(0xff707070);
+
+
   //Light Theme
-  static Color primaryColorLight = Color(0xff9D4EDD);
-  static Color accentColorLight = Color(0xff9D4EDD);
+  static Color primaryColorLight = Color(0xff007AFD);
+  static Color accentColorLight = Color(0xff007AFD);
   static Color backgroundColorLight = Color(0xffffffff);
   static Color scaffoldBackgroundColorLight = Color(0xffffffff);
 
@@ -23,8 +27,8 @@ class ThemeColors {
   static Color bodyText2Light = Color(0xff181818);
 
   //Dark Theme
-  static Color primaryColorDark = Color(0xff9D4EDD);
-  static Color accentColorDark = Color(0xff9D4EDD);
+  static Color primaryColorDark = Color(0xff007AFD);
+  static Color accentColorDark = Color(0xff007AFD);
   static Color backgroundColorDark = Color(0xffffffff);
   static Color scaffoldBackgroundColorDark = Color(0xffffffff);
 
