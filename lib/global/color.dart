@@ -9,8 +9,10 @@ class ThemeColors {
   static Color black = Color(0xff000000);
   static Color hintTextColor = Color(0xff8E8E90);
   static Color logoColor = Color(0xff5EA9CE);
+
   static Color subtitleColor = Color(0xffb1b1b1);
   static Color dividerColor = Color(0xff707070);
+
 
   //Light Theme
   static Color primaryColorLight = Color(0xff007AFD);
