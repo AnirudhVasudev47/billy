@@ -43,9 +43,9 @@ class AuthenticationService {
 
   getUserNumber(){
     String number = _firebaseAuth.currentUser!.phoneNumber.toString();
-    String newString = number.substring(0, 1 + 1)
+    String newString = number.substring(0, 2 + 1)
         + " "
-        + number.substring(3 + 1);
-    return number;
+        + number.substring(2 + 1);
+    return newString;
   }
 }
