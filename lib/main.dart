@@ -45,9 +45,6 @@ class _MyAppState extends State<MyApp> {
               Provider<AuthenticationService>(
                 create: (_) => AuthenticationService(FirebaseAuth.instance),
               ),
-              Provider<Rewards>(
-                create: (_) => Rewards(firebaseFirestore),
-              )
             ],
             child: MaterialApp(
               debugShowCheckedModeBanner: false,

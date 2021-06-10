@@ -1,6 +1,10 @@
 import 'package:billy/global/color.dart';
 import 'package:billy/model/rewards_model.dart';
+import 'package:billy/ui/widget/bill_finances_tab.dart';
+import 'package:billy/ui/widget/bill_recharge_tab.dart';
+import 'package:billy/ui/widget/bill_tab_card.dart';
 import 'package:billy/ui/widget/bill_tab_reward_card.dart';
+import 'package:billy/ui/widget/bill_utilities_tab.dart';
 import 'package:carousel_slider/carousel_slider.dart';
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:flutter/material.dart';
@@ -14,7 +18,7 @@ class BillTab extends StatefulWidget {
   _BillTabState createState() => _BillTabState();
 }
 
-class _BillTabState extends State<BillTab> {
+class _BillTabState extends State<BillTab> with SingleTickerProviderStateMixin {
   ScreenUtil screenUtil = new ScreenUtil();
   Stream<QuerySnapshot> rewardsStream =
       FirebaseFirestore.instance.collection('offers').snapshots();
@@ -22,6 +26,41 @@ class _BillTabState extends State<BillTab> {
 
   TextEditingController searchController = new TextEditingController();
   String searchText = '';
+
+  late TabController tabController;
+  final List<Tab> myTabs = <Tab>[
+    Tab(
+      child: Text(
+        'Recharge',
+        style: TextStyle(color: ThemeColors.black),
+      ),
+    ),
+    Tab(
+      child: Text(
+        'Utilities',
+        style: TextStyle(color: ThemeColors.black),
+      ),
+    ),
+    Tab(
+      child: Text(
+        'Finance',
+        style: TextStyle(color: ThemeColors.black),
+      ),
+    ),
+  ];
+
+  @override
+  void initState() {
+    super.initState();
+    tabController = TabController(vsync: this, length: myTabs.length);
+  }
+
+  @override
+  void dispose() {
+    super.dispose();
+    searchController.dispose();
+    tabController.dispose();
+  }
 
   @override
   Widget build(BuildContext context) {
@@ -50,9 +89,33 @@ class _BillTabState extends State<BillTab> {
           child: rewardsWidget(),
         ),
         searchTextField(),
-        searchController.text.isEmpty?
-            Container(child: Text('appbar'),):
-            Container(child: Text('search result'),),
+        searchController.text.isEmpty
+            ? Expanded(
+                child: Column(
+                  children: [
+                    TabBar(
+                      controller: tabController,
+                      tabs: myTabs,
+                      indicatorColor: ThemeColors.primaryColorLight,
+                    ),
+                    Expanded(
+                      child: TabBarView(
+                        controller: tabController,
+                        children: [
+                          BillRechargeTab(),
+                          BillUtilitiesTab(),
+                          BillFinancesTab(),
+                        ],
+                      ),
+                    ),
+                  ],
+                ),
+              )
+            : Container(
+                child: Center(
+                  child: Text('search result'),
+                ),
+              ),
       ],
     );
   }
@@ -64,9 +127,9 @@ class _BillTabState extends State<BillTab> {
       ),
       child: TextField(
         controller: searchController,
-        onChanged: (text){
+        onChanged: (text) {
           setState(() {
-            searchText = text;
+            searchText = text.toLowerCase();
           });
         },
         style: TextStyle(
@@ -75,8 +138,8 @@ class _BillTabState extends State<BillTab> {
         ),
         decoration: InputDecoration(
           focusedBorder: OutlineInputBorder(
-            borderSide: BorderSide(
-                color: ThemeColors.primaryColorLight, width: 1.0),
+            borderSide:
+                BorderSide(color: ThemeColors.primaryColorLight, width: 1.0),
           ),
           counterText: '',
           isDense: true,
@@ -146,7 +209,12 @@ class _BillTabState extends State<BillTab> {
             ),
           );
         } else {
-          return Center(child: CircularProgressIndicator());
+          return Container(
+            height: screenUtil.setHeight(141),
+            child: Center(
+              child: CircularProgressIndicator(),
+            ),
+          );
         }
       },
     );
