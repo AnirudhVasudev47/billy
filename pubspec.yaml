@@ -61,6 +61,9 @@ flutter:
   assets:
     - assets/images/onboarding/
     - assets/images/bill_tab/
+    - assets/images/home_tab/
+    - assets/images/home_page/
+    - assets/images/profile_tab/
 
   fonts:
    - family: Hind Siliguri

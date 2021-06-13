@@ -11,6 +11,7 @@ class ThemeColors {
   static Color logoColor = Color(0xff5EA9CE);
   static Color subtitleColor = Color(0xffb1b1b1);
   static Color dividerColor = Color(0xff707070);
+  static Color transparent = Colors.transparent;
 
   //Light Theme
   static Color primaryColorLight = Color(0xff007AFD);

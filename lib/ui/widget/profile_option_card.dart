@@ -9,7 +9,7 @@ class ProfileOptionCard extends StatelessWidget {
       required this.onPressed})
       : super(key: key);
 
-  final Icon leading;
+  final Widget leading;
   final String title;
   final Function () onPressed;
 

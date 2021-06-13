@@ -7,6 +7,7 @@ import 'package:billy/ui/tab_screens/profile_tab.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:flutter_svg/flutter_svg.dart';
 
 class HomePage extends StatefulWidget {
   const HomePage({Key? key}) : super(key: key);
@@ -52,35 +53,26 @@ class _HomePageState extends State<HomePage> {
         ),
       ),
       bottomNavigationBar: BottomNavigationBar(
-        items: const <BottomNavigationBarItem>[
+        items: <BottomNavigationBarItem>[
           BottomNavigationBarItem(
-            icon: Icon(
-              Icons.home_outlined,
-            ),
-            label: 'Home',
+              icon: SvgPicture.asset('assets/images/home_page/home.svg'),
+              activeIcon: SvgPicture.asset('assets/images/home_page/home.svg'),
+              label: 'Home'
           ),
           BottomNavigationBarItem(
-            icon: Icon(
-              Icons.description,
-            ),
+            icon: SvgPicture.asset('assets/images/home_page/bill.svg'),
             label: 'Bill',
           ),
           BottomNavigationBarItem(
-            icon: Icon(
-              Icons.auto_awesome_motion,
-            ),
-            label: 'One Bill',
+            icon: SvgPicture.asset('assets/images/home_page/onebill.svg'),
+            label: '\"ONE BILL\"',
           ),
           BottomNavigationBarItem(
-            icon: Icon(
-              Icons.history,
-            ),
+            icon: SvgPicture.asset('assets/images/home_page/history.svg'),
             label: 'History',
           ),
           BottomNavigationBarItem(
-            icon: Icon(
-              Icons.account_circle_outlined,
-            ),
+            icon: SvgPicture.asset('assets/images/home_page/profile.svg'),
             label: 'Profile',
           ),
         ],

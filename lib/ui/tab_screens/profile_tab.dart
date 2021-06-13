@@ -3,6 +3,7 @@ import 'package:billy/services/authentication.dart';
 import 'package:billy/ui/widget/profile_option_card.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:flutter_svg/flutter_svg.dart';
 import 'package:provider/provider.dart';
 import 'package:share_plus/share_plus.dart';
 
@@ -73,17 +74,38 @@ class ProfileTab extends StatelessWidget {
           height: screenUtil.setHeight(40),
         ),
         ProfileOptionCard(
-          leading: Icon(
-            Icons.account_circle_outlined,
-            size: 35,
-            color: ThemeColors.black,
-          ),
+          leading: SvgPicture.asset('assets/images/profile_tab/refer.svg'),
           title: 'Share with friends',
           onPressed: () {
             print('test');
             Share.share('check out my website https://example.com');
           },
-        )
+        ),
+        ProfileOptionCard(
+          leading: SvgPicture.asset('assets/images/profile_tab/rate_us.svg'),
+          title: 'Rate Us',
+          onPressed: () {
+            print('test');
+            // Share.share('check out my website https://example.com');
+          },
+        ),
+        ProfileOptionCard(
+          leading: SvgPicture.asset(
+              'assets/images/profile_tab/help_and_support.svg'),
+          title: 'Help and Support',
+          onPressed: () {
+            print('test');
+            // Share.share('check out my website https://example.com');
+          },
+        ),
+        ProfileOptionCard(
+          leading: SvgPicture.asset('assets/images/profile_tab/about.svg'),
+          title: 'About',
+          onPressed: () {
+            print('test');
+            // Share.share('check out my website https://example.com');
+          },
+        ),
       ],
     );
   }
